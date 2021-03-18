@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        background-color: aqua;
+    }
+    h1{
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-weight: bold;
+    line-height: 2;
+    font-size: 10rem;
+    color: palevioletred;
+        width: 30px;
+    }
+    p{
+        border: 2px solid green;
+        display: inline-block;
+        font-size: 5rem;
+    }
+    button{
+        align-items: center;
+        width:100px;
+        border-radius: 50px;
+        color:red;
+        background-color: darkcyan;
+    }
+    button:hover{
+        color: black;
+        background-color: orange;
+    } 
+    button::after{
+        background-color: white;
+    }
+</style>
+<body>
+    <button type="button" onclick="myFunction()">START</button>
+    <br>
+    <br>
+    <p id="near"></p> <br>
+    <br>
+    <img id="birthday" src="" alt="">
+
+    <p id="demo"></p>
+    <h1 id="one"></h1>
+    <script>
+        let count=0;
+        function myFunction(){
+        setInterval(() => {
+            document.getElementById("demo").innerHTML=count;
+            count++;
+
+            if(count==8){
+                    document.getElementById("near").innerHTML="HERE TO GO TWO MORE MIN";
+            }
+            if(count === 10){
+                document.getElementById("demo").innerHTML="hi";
+                document.getElementById("birthday").src="download.jpg";
+            }
+            if(count==10){
+                document.getElementById("one").innerHTML="Happy Birthday Mr.Bharath";
+            }
+        }, 1000);
+    }
+
+    </script>
+</body>
+</html>
